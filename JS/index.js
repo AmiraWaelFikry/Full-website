@@ -2,6 +2,7 @@ import { myValidation, restMessages } from "./register.js";
 import { getCourses, getCourseDetail } from "./courses.js";
 import { paymentDetailes, addcard, displayCards } from "./pay.js";
 const currentPage = window.location.pathname.split('/').pop();
+consoole.log(currentPage);
 //In Register : Registeration Validation
 if (currentPage==="/") {
   /*
