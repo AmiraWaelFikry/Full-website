@@ -4,7 +4,7 @@ import { paymentDetailes, addcard, displayCards } from "./pay.js";
 const currentPage = window.location.pathname.split('/').pop();
 
 //In Register : Registeration Validation
-if (currentPage==="/") {
+if (currentPage==="") {
   /*
   ====================
   Declerations
