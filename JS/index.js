@@ -2,7 +2,7 @@ import { myValidation, restMessages } from "./register.js";
 import { getCourses, getCourseDetail } from "./courses.js";
 import { paymentDetailes, addcard, displayCards } from "./pay.js";
 const currentPage = window.location.pathname.split('/').pop();
-consoole.log(currentPage);
+
 //In Register : Registeration Validation
 if (currentPage==="/") {
   /*
@@ -10,6 +10,7 @@ if (currentPage==="/") {
   Declerations
   ===================
   */
+  consoole.log(currentPage);
  const form = document.getElementById("regForm");
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
@@ -55,6 +56,7 @@ if (currentPage==="/") {
 
 // In Home : Display the courses
 else if (currentPage === "home.html") {
+  consoole.log(currentPage);
   Swal.fire({
     title: "Welcome   " + localStorage.getItem("username"),
     text: "Hoping always to see you!",
