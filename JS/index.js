@@ -10,7 +10,7 @@ if (currentPage==="/") {
   Declerations
   ===================
   */
-  consoole.log(currentPage);
+  console.log(currentPage);
  const form = document.getElementById("regForm");
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
@@ -56,7 +56,7 @@ if (currentPage==="/") {
 
 // In Home : Display the courses
 else if (currentPage === "home.html") {
-  consoole.log(currentPage);
+  console.log(currentPage);
   Swal.fire({
     title: "Welcome   " + localStorage.getItem("username"),
     text: "Hoping always to see you!",
