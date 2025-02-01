@@ -56,7 +56,6 @@ if (currentPage==="/") {
 
 // In Home : Display the courses
 else if (currentPage === "home.html") {
-  console.log(currentPage);
   Swal.fire({
     title: "Welcome   " + localStorage.getItem("username"),
     text: "Hoping always to see you!",
