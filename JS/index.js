@@ -2,14 +2,14 @@ import { myValidation, restMessages } from "./register.js";
 import { getCourses, getCourseDetail } from "./courses.js";
 import { paymentDetailes, addcard, displayCards } from "./pay.js";
 const currentPage = window.location.pathname.split('/').pop();
-const form = document.getElementById("regForm");
 //In Register : Registeration Validation
-if (form) {
+if (currentPage==="") {
   /*
   ====================
   Declerations
   ===================
   */
+ const form = document.getElementById("regForm");
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
