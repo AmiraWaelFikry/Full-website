@@ -1,17 +1,16 @@
 import { myValidation, restMessages } from "./register.js";
 import { getCourses, getCourseDetail } from "./courses.js";
 import { paymentDetailes, addcard, displayCards } from "./pay.js";
-const form = document.getElementById("regForm");
-const currentPage = window.location.pathname;
-
+const currentPage = window.location.pathname.split('/').pop();
 //In Register : Registeration Validation
-if (form) {
+if (currentPage === 'index.html') {
   /*
   ====================
   Declerations
   ===================
   */
  
+ const form = document.getElementById("regForm");
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const passwordInput = document.getElementById("password");
@@ -55,7 +54,7 @@ if (form) {
 }
 
 // In Home : Display the courses
-if (currentPage === "/home.html") {
+else if (currentPage === "home.html") {
   Swal.fire({
     title: "Welcome   " + localStorage.getItem("username"),
     text: "Hoping always to see you!",
@@ -68,7 +67,7 @@ if (currentPage === "/home.html") {
 }
 
 //In Course Detail : Display the clicked course details
-if (currentPage === "/course-details.html") {
+else if (currentPage === "course-details.html") {
   const urlParams = new URLSearchParams(window.location.search);
   const cardId = urlParams.get("id");
   getCourseDetail(cardId);
@@ -76,7 +75,7 @@ if (currentPage === "/course-details.html") {
 
 //In payment page
 
-if (currentPage === "/payment.html") {
+else if (currentPage === "payment.html") {
   /*
   ====================
   Declerations
