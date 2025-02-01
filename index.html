@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/all.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <title>Registeration</title>
+  </head>
+  <body>
+    <section class="h-100 bg-dark">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col">
+            <div class="card card-registration my-4">
+              <div class="row g-0">
+                <!-- Registeration Image -->
+
+                <div class="col-xl-6 d-none d-xl-block">
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                    alt="Sample photo"
+                    class="img-fluid"
+                    style="
+                      border-top-left-radius: 0.25rem;
+                      border-bottom-left-radius: 0.25rem;
+                      height: 100vh;
+                      width: 100%;
+                    "
+                  />
+                </div>
+
+                <!-- Registeration Form -->
+
+                <form
+                  action="home.html"
+                  id="regForm"
+                  class="col-xl-6 needs-validation"
+                  novalidate
+                >
+                  <div class="card-body p-md-5 text-black">
+                    <h3 class="mb-5 text-uppercase">
+                      Student registration form
+                    </h3>
+
+                    <!-- Student name -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <div class="input-container form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control form-control-lg"
+                          id="name"
+                          placeholder="name@example.com"
+                          required
+                        />
+                        <label for="name" class="form-label"
+                          >Student name</label
+                        >
+                        <div class="valid-feedback">Looks great!</div>
+                        <div  class="invalid-feedback"></div>
+                      </div>
+                    </div>
+                    <!-- Email  -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <div class="input-container form-floating mb-3">
+                        <input
+                          type="email"
+                          class="form-control form-control-lg"
+                          id="email"
+                          placeholder="name@example.com"
+                          required
+                        />
+                        <label for="email">Email address</label>
+                        <div id="valid-email" class="valid-feedback">
+                          Looks great!
+                        </div>
+                        <div id="invalid-email" class="invalid-feedback">
+                          please enter your email
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <div class="input-container form-floating mb-3">
+                        <input
+                          type="password"
+                          class="form-control form-control-lg"
+                          id="password"
+                          placeholder="name@example.com"
+                          required
+                        />
+                        <label for="password">Password</label>
+                        <div class="valid-feedback">Looks great!</div>
+                        <div class="invalid-feedback"></div>
+                      </div>
+                    </div>
+
+                    <!-- Gender Selection -->
+                    <div
+                      id="genderGroup"
+                      class="d-md-flex justify-content-start align-items-center mb-4 py-2"
+                    >
+                      <h6 class="mb-0 me-4">Gender:</h6>
+
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="gender"
+                          id="femaleGender"
+                          value="female"
+                          required
+                        />
+                        <label class="form-check-label" for="femaleGender"
+                          >Female</label
+                        >
+                      </div>
+
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="gender"
+                          id="maleGender"
+                          value="male"
+                          required
+                        />
+                        <label class="form-check-label" for="maleGender"
+                          >Male</label
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Submit & Reset Buttons -->
+
+                    <div class="d-flex justify-content-end pt-3">
+                      <button
+                        type="reset"
+                        data-mdb-button-init
+                        data-mdb-ripple-init
+                        class="btn btn-light btn-lg"
+                      >
+                        Reset all
+                      </button>
+                      <button
+                        type="submit"
+                        data-mdb-button-init
+                        data-mdb-ripple-init
+                        class="btn btn-warning btn-lg ms-2"
+                      >
+                        Submit form
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="JS/index.js"></script>
+  </body>
+</html>

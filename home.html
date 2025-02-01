@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/all.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- ============================================================
+    ===================== Navbar=====================================
+    =================================================================  -->
+    <nav class="navbar navbar-expand-lg bg-warning px-5 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-4" href="#">
+          <i class="fa-solid fa-book"></i>&nbsp;elEearning</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ===========================================================
+    =================== Slider ====================================
+    =============================================================== -->
+    <main>
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img
+              src="IMG/pexels-pixabay-267885.jpg"
+              class="d-block w-100"
+              style="height: 80vh; object-fit: fill"
+              alt="..."
+            />
+            <div class="h-50">
+              <div class="carousel-caption">
+                <h3 class="f-1 h1">The best online learning platform</h3>
+                <p class="f-2">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Itaque eaque eveniet quae, magni molestiae laudantium ut esse
+                  cum perspiciatis facilis.
+                </p>
+                <button type="button" class="btn btn-warning">Join Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img
+              src="IMG/pexels-hai-nguyen-825252-1699414.jpg"
+              class="d-block w-100"
+              style="height: 80vh; object-fit: fill"
+              alt="..."
+            />
+            <div class="h-50">
+              <div class="carousel-caption">
+                <h3 class="f-1 h1">The best online learning platform</h3>
+                <p class="f-2">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Itaque eaque eveniet quae, magni molestiae laudantium ut esse
+                  cum perspiciatis facilis.
+                </p>
+                <button type="button" class="btn btn-warning">Join Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- ===========================================================
+    =================== Courses  ===================================
+    =============================================================== -->
+
+    <section class="bsb-service-6 py-5 py-xl-8">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+            <h3 class="fs-6 mb-2 text-secondary text-center text-uppercase">
+              What We Do?
+            </h3>
+            <h2 class="display-5 mb-4 mb-md-5 text-center">
+              We are giving you perfect courses with our proficient services.
+            </h2>
+            <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container overflow-hidden">
+        <div id="courses-container" class="row gy-4"></div>
+      </div>
+    </section>
+
+    <!-- ===========================================================
+    =================== Footer  ===================================
+    =============================================================== -->
+    <footer class="bg-warning text-center text-lg-start">
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2025 Copyright:
+        <a class="text-body" href="home.html">elearning.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script type="module" src="JS/index.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
