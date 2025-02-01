@@ -1,66 +1,68 @@
 import { myValidation, restMessages } from "./register.js";
 import { getCourses, getCourseDetail } from "./courses.js";
 import { paymentDetailes, addcard, displayCards } from "./pay.js";
-const currentPage = window.location.pathname.split('/').pop();
 
 //In Register : Registeration Validation
-if (currentPage==="") {
-  /*
-  ====================
-  Declerations
-  ===================
-  */
-  console.log(currentPage);
- const form = document.getElementById("regForm");
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const passwordInput = document.getElementById("password");
-  const genderGroup = document.getElementById("genderGroup");
+/*
+====================
+Declerations
+===================
+*/
 
-  /*
-  ====================
-  Eventlistners
-  ===================
-  */
-  form.addEventListener(
-    "submit",
-    (event) => {
-      if (!myValidation()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-    },
-    false
-  );
+const form = document.getElementById("regForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const genderGroup = document.getElementById("genderGroup");
 
-  form.addEventListener("reset", () => {
-    const inputs = [nameInput, emailInput, passwordInput];
-    restMessages(inputs);
-  });
-  nameInput.addEventListener("click", () => {
-    nameInput.classList.remove("is-invalid", "is-valid");
-  });
+/*
+====================
+Eventlistners
+===================
+*/
+if (form) {
+form.addEventListener(
+  "submit",
+  (event) => {
+    if (!myValidation()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  },
+  false
+);
 
-  emailInput.addEventListener("click", () => {
-    emailInput.classList.remove("is-invalid", "is-valid");
-  });
+form.addEventListener("reset", () => {
+  const inputs = [nameInput, emailInput, passwordInput];
+  restMessages(inputs);
+});
+nameInput.addEventListener("click", () => {
+  nameInput.classList.remove("is-invalid", "is-valid");
+});
 
-  passwordInput.addEventListener("click", () => {
-    passwordInput.classList.remove("is-invalid", "is-valid");
-  });
+emailInput.addEventListener("click", () => {
+  emailInput.classList.remove("is-invalid", "is-valid");
+});
 
-  genderGroup.addEventListener("click", () => {
-    genderGroup.classList.remove("text-danger", "text-success");
-  });
+passwordInput.addEventListener("click", () => {
+  passwordInput.classList.remove("is-invalid", "is-valid");
+});
+
+genderGroup.addEventListener("click", () => {
+  genderGroup.classList.remove("text-danger", "text-success");
+});
 }
 
+
+const currentPage = window.location.pathname.split('/').pop();
+
 // In Home : Display the courses
-else if (currentPage === "home.html") {
+ if (currentPage === "home.html") {
   Swal.fire({
     title: "Welcome   " + localStorage.getItem("username"),
     text: "Hoping always to see you!",
     imageUrl:
-      "https://static.vecteezy.com/system/resources/thumbnails/010/925/820/small/colorful-welcome-design-template-free-vector.jpg", // URL to your custom image
+    "https://static.vecteezy.com/system/resources/thumbnails/010/925/820/small/colorful-welcome-design-template-free-vector.jpg", // URL to your custom image
     imageWidth: 250,
     imageHeight: 100,
   });
